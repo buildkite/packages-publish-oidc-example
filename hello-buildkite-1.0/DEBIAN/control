@@ -1,0 +1,8 @@
+Package: hello-buildkite
+Version: 1.0
+Section: base
+Priority: optional
+Architecture: all
+Maintainer: Your Name <your.email@example.com>
+Description: A simple hello buildkite script
+ This package contains a script that prints "Hello, Buildkite!" to the terminal.
