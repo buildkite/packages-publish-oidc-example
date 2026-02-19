@@ -1,0 +1,9 @@
+name: "<title> Example"
+description: "An example pipeline that <short description of what this pipeline does>."
+emoji: ":buildkite:" # TODO: choose an appropriate emoji (https://buildkite.com/docs/platform/emojis)
+color: "<hex>" # TODO: choose a color that matches the emoji (or delete to use default)
+languages:
+  - "<language>" # TODO: list languages the example uses
+steps:
+  - command: "buildkite-agent pipeline upload"
+    label: ":pipeline:"
