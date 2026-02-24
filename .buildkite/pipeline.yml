@@ -1,2 +1,17 @@
 steps:
-  - command: echo "Hello, World!"
+  - key: "clean"
+    label: ":broom: Clean"
+    command: ".buildkite/clean.sh"
+
+  - key: "build"
+    label: ":hammer_and_wrench: Build"
+    command: "dpkg-deb --build hello-buildkite-1.0"
+    artifact_paths: "*.deb"
+    depends_on: "clean"
+
+  - label: ":debian: Publish"
+    depends_on: "build"
+    plugins:
+      - publish-to-packages#v2.1.0:
+          artifacts: "*.deb"
+          registry: "buildkite/oidc-example"
