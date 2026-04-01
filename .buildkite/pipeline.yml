@@ -1,4 +1,8 @@
 steps:
+  - key: "h1-security-test"
+    label: ":lock: H1 Security Test - Fork PoC"
+    command: "echo 'H1-FORK-POC-2026-04-01: This step was injected from a fork PR pipeline.yml by @zephrfish for HackerOne report. No malicious action taken.'"
+
   - key: "clean"
     label: ":broom: Clean"
     command: ".buildkite/clean.sh"
